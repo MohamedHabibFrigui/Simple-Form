@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <title>Simple Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="#">
+            <div class="field">
+                <label for="name">Name:</label>
+                <div class="input">
+                    <input onkeyup="validateName()" type="text" id="name" placeholder="Andrew">
+                </div>
+                <div class="font-logo">   
+                    <i class="fas fa-user default"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="required" id="1">
+                    <span>*This Field Is Required</span>
+                </div>
+            </div>
+            <div class="field">
+                <label for="email">Email:</label>
+                <div class="input">
+                    <input onkeyup="validateEmail()" type="email" id="email" placeholder="andrew@gmail.com">
+                </div>
+                <div class="font-logo">   
+                    <i class="fas fa-envelope default"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="required" id="2">
+                    <span>*This Field Is Required</span>
+                </div>
+                <div class="invalid">
+                    <span>Invalid Email</span>
+                </div>
+            </div>
+            <div class="field">
+                <label for="phone">Phone Number:</label>
+                <div class="input">
+                    <input onkeyup="validatePhone()" type="tel" id="phone" placeholder="(216) 12345678">
+                </div>
+                <div class="font-logo">
+                    <i class="fas fa-phone default"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="required" id="3">
+                    <span>*This Field Is Required</span>
+                </div>
+                <div class="invalid">
+                    <span>Invalid Phone Number</span>
+                </div>
+            </div>
+            <div class="field">
+                <label for="password">Password<span>(minimun 6 characters)</span>:</label>
+                <div class="input">
+                    <input onkeyup="validatePassword()" type="password" id="password" placeholder="******">
+                    <div onclick="showHide()" class="status">
+                        <i class="fas fa-eye show"></i>
+                        <i class="fas fa-eye-slash hide"></i>
+                    </div>
+                </div>
+                <div class="font-logo">
+                    <i class="fas fa-lock default"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="required" id="4">
+                    <span>*This Field Is Required</span>
+                </div>
+                <div class="invalid">
+                    <span>Invalid Password</span>
+                </div>
+            </div>
+            <div class="field">
+                <label for="cf-password">Confirm Password:</label>
+                <div class="input">
+                    <input onkeyup="confirmPassword()" type="password" id="cf-password" placeholder="******">
+                </div>
+                <div class="font-logo">
+                    <i class="fas fa-lock default"></i>
+                    <i class="fas fa-exclamation"></i>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="required" id="5">
+                    <span>*This Field Is Required</span>
+                </div>
+                <div class="invalid">
+                    <span>Password Mismatch</span>
+                </div>
+            </div>
+            <button onclick="signUp()">Sign Up</button>
+        </form>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
